@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# This shell script allows you to create an individual file release in case you
-# have no command line access to your webspace.
+# This shell script allows you to create an individual file release in case you have no command
+# line access to your webspace.
 
-# Variables
+# Variables - to be updated to your needs before running the script
 installdirectory=/var/tmp
 softwaredirectory=mediawiki
 mediawiki=REL1_27
@@ -52,11 +52,9 @@ git checkout origin/${mediawiki}
 echo "Done!"
 echo
 echo "Removing '.git' directories of MediaWiki and Vector:"
-cd Vector
 rm -r .git/
 cd ../..
 rm -r .git/
 echo "Done."
 echo
 echo "The file release may now be moved to your webspace."
-echo
