@@ -14,11 +14,12 @@ semanticextraspecialproperties=^1.5
 
 # Commands
 echo
-echo "Creating individual file release for you."
+echo "Creating an individual file release"
 echo
-echo "Cloning in and checking out MediaWiki:"
+echo "Cloning and checking out ${mediawiki} MediaWiki:"
+echo
 cd ${installdirectory}
-git clone https://gerrit.wikimedia.org/r/p/mediawiki/core.git ${softwaredirectory}
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/core.git ${softwaredirectory} --depth 20
 cd ${softwaredirectory}
 git checkout origin/${mediawiki}
 echo "Done."
@@ -40,11 +41,13 @@ cat <<EOF >composer.local.json
 EOF
 echo "Done."
 echo
-echo "Installing MediaWiki dependencies as well as semantic extensions including dependencies:"
+echo "Installing MediaWiki dependencies as well as predefined"
+echo "semantic extensions including its required dependencies:"
+echo
 composer update --no-dev --prefer-source
 echo "Done."
 echo
-echo "Cloning in and checking out Vector:"
+echo "Cloning and checking out Vector skin:"
 cd skins
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/skins/Vector.git
 cd Vector
@@ -52,9 +55,9 @@ git checkout origin/${mediawiki}
 echo "Done."
 echo
 echo "Removing '.git' directories of MediaWiki and Vector:"
-rm -r .git/
+rm -r -f .git/
 cd ../..
-rm -r .git/
+rm -r -f .git/
 echo "Done."
 echo
 echo "The file release may now be moved to your webspace."
