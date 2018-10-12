@@ -6,11 +6,11 @@
 # Variables - to be updated to your needs before running the script
 installdirectory=/var/tmp
 softwaredirectory=mediawiki
-mediawiki=REL1_27
-semanticmediawiki=^2.5
-semanticresultformats=^2.5
-semanticcompoundqueries=^1.1
-semanticextraspecialproperties=^1.5
+mediawiki=REL1_31
+semanticmediawiki=^3.0
+semanticresultformats=^3.0
+semanticcompoundqueries=^1.2
+semanticextraspecialproperties=^2.0
 
 # Commands
 echo
