@@ -24,3 +24,7 @@ By default, the individual file release will bundle the following files and exte
 #### Windows users
 
 Windows users may want to change the `installdirectory` line in "IndividualFileRelease.sh" to something like `installdirectory=/d/temp` (equivalent to D:\Temp).
+
+## Note
+
+When creating a file release make sure that the respective platform environments are matching most importantly in respect of PHP to avoid issues arising from version mismatches, e.g. to avoid dependencies of MediaWiki or Semantic MediaWiki, etc. being pulled which are not compatible on diverget setups.
