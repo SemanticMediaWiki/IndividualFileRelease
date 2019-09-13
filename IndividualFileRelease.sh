@@ -19,7 +19,7 @@ echo
 echo "Cloning and checking out ${mediawiki} MediaWiki:"
 echo
 cd ${installdirectory}
-git clone https://gerrit.wikimedia.org/r/p/mediawiki/core.git ${softwaredirectory} --depth 20
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/core.git ${softwaredirectory} --branch ${mediawiki} --depth 20
 cd ${softwaredirectory}
 git checkout origin/${mediawiki}
 echo "Done."
