@@ -3,13 +3,13 @@
 # This shell script allows you to create an individual file release in case you have no command
 # line access to your webspace.
 
-# Variables - to be updated to your needs before running the script
+# Variables - recommended setup - may be updated to your needs before running the script
 installdirectory=/var/tmp
 softwaredirectory=mediawiki
 mediawiki=REL1_31
-semanticmediawiki=^3.0
-semanticresultformats=^3.0
-semanticcompoundqueries=^1.2
+semanticmediawiki=^3.1
+semanticresultformats=^3.1
+semanticcompoundqueries=^2.1
 semanticextraspecialproperties=^2.0
 
 # Commands
